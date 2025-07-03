@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #ffecd2;
+    background: linear-gradient(to right, #FF6F00, #00BFA5); /* Updated for orange-teal gradient */
+}
+
+.container {
+    background: #fff;
+    width: 450px;
+    padding: 2rem;
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease all;
+}
+
+.container:hover {
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    margin: 0 2rem;
+}
+
+.form-title {
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #FF6F00; /* Orange color for title */
+}
+
+input {
+    color: inherit;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #757575;
+    padding-left: 1.5rem;
+    font-size: 16px;
+    transition: 0.3s ease all;
+}
+
+.input-group {
+    padding: 1% 0;
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    color: #00BFA5; /* Teal for icons */
+}
+
+input:focus {
+    background-color: transparent;
+    outline: none;
+    border-bottom: 2px solid #FF6F00; /* Orange underline on focus */
+}
+
+input::placeholder {
+    color: transparent;
+}
+
+label {
+    color: #757575;
+    position: relative;
+    left: 1.2em;
+    top: -1.3em;
+    cursor: auto;
+    transition: 0.3s ease all;
+}
+
+input:focus~label, 
+input:not(:placeholder-shown)~label {
+    top: -3em;
+    color: #FF6F00;
+    font-size: 14px;
+}
+
+.recover {
+    text-align: right;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.recover a {
+    text-decoration: none;
+    color: #00BFA5; /* Teal for links */
+    transition: 0.3s;
+}
+
+.recover a:hover {
+    background-color: #FF6F00; /* Hover effect in orange */
+    color: black;
+    text-decoration: underline;
+}
+
+.btn {
+    font-size: 1.2rem;
+    padding: 10px 0;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    width: 100%;
+    background: #00BFA5; /* Teal background for button */
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+
+
+.or {
+    font-size: 1.2rem;
+    margin-top: 0.7rem;
+    text-align: center;
+    color: #757575;
+}
+
+.icons {
+    text-align: center;
+}
+
+.icons i {
+    color: #00BFA5;
+    padding: 0.8rem 1.2rem;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border: 2px solid #dfe9f5;
+    margin: 0 10px;
+    transition: 0.3s ease all;
+}
+
+.icons i:hover {
+    background: #FF6F00;
+    color: white;
+    border: 2px solid #FF6F00;
+    transform: scale(1.1);
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 4rem;
+    margin-top: 1.2rem;
+    font-weight: bold;
+}
+
+button {
+    color: #00BFA5;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    text-decoration: underline;
+    color: #FF6F00;
+}

@@ -1,0 +1,32 @@
+services:
+  go:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    environment:
+      MYSQL_DB_CONNECTION: "mysql"
+      MYSQL_DB_NAME: "ecommerce"
+      MYSQL_USER: "root"
+      MYSQL_PASSWORD: "rootpassword"
+      SITE_URL: "http://localhost"
+    depends_on:
+      - mysql
+    networks:
+      - external_network
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "rootpassword"
+      MYSQL_DATABASE: "ecommerce"
+    ports:
+      - "3306:3306"
+    networks:
+      - external_network
+
+networks:
+  external_network:
+    external: true
